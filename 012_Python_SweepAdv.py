@@ -27,10 +27,10 @@ for ip in IPNetwork(direccion[0] + "/" + str(direccion[1])):
  else:
   print ip, 'is down!'
 
-#envio del correo
+#send mail
 fromaddr = 'your_user@gmail.com'
 toaddrs  = 'dest@gmail.com'
-msg = 'Los siguientes nodos (' + str(i) + ') estan up:\n'
+msg = 'Following IP (' + str(i) + ') are up:\n'
 
 for idx, val in enumerate(host_up):
  msg += str(val) + '\n'
