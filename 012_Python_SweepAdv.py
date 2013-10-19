@@ -44,3 +44,5 @@ server.starttls()
 server.login(username,password)
 server.sendmail(fromaddr, toaddrs, msg)
 server.quit()
+
+#ref: http://www.reddit.com/r/Python/comments/15n6dw/sending_emails_through_python_and_gmail/
