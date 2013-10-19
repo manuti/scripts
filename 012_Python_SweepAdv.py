@@ -35,6 +35,10 @@ msg = 'Following IP (' + str(i) + ') are up:\n'
 for idx, val in enumerate(host_up):
  msg += str(val) + '\n'
 
+sbj = 'IP up'
+
+message = 'Subject: %s\n\n%s' % (sbj, msg)
+
 # Credentials (if needed)
 username = 'your_user@gmail.com'
 password = 'yourpass'
@@ -42,7 +46,7 @@ password = 'yourpass'
 server = smtplib.SMTP('smtp.gmail.com:587')
 server.starttls()
 server.login(username,password)
-server.sendmail(fromaddr, toaddrs, msg)
+server.sendmail(fromaddr, toaddrs, message)
 server.quit()
 
 #ref: http://www.reddit.com/r/Python/comments/15n6dw/sending_emails_through_python_and_gmail/
