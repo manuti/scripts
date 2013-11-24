@@ -1,3 +1,4 @@
+<!-- rename to index.php -->
 <?php
  include ("lib.php");
  $conn = AbreBD();
